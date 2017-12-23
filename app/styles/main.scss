@@ -1,0 +1,51 @@
+@import "bourbon/_bourbon.scss";
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Assistant:400,700,800&amp;subset=hebrew');
+// font-family: 'Assistant', sans-serif;
+// font-family: 'Amatic SC', cursive;
+
+
+// css reset
+body { font-family: 'Assistant', sans-serif; font-size: 16px; direction: rtl; padding: 30px; background: url(../images/pita.jpg) no-repeat center 0; background-size: cover;}
+img { max-width: 100%; }
+
+// end css reset
+h1,h2,h3,h4,h5,h6,.btn { font-family: 'Amatic SC', 'cursive', sans-serif; }
+h1 { font-weight: 900; color:#141414; font-size: 3.2em; }
+h2 { font-weight: 900; color:#141414; font-size: 2.5em; }
+h3 { font-weight: 900; color:#141414; font-size: 2em; }
+h4 { font-weight: 900; color:#141414; font-size: 1.5em; }
+h5 { font-weight: 900; color:#141414; font-size: 1em; }
+h6 { font-weight: 900; color:#141414; font-size: 0.9em; }
+
+// your css goes here
+
+.btn {  cursor: pointer;  padding: 6px 15px;  background: #ff6666;  color: #fff;  font-weight: bold;  font-size: 32px; transition: all 0.2s ease;
+  &.focus, &:focus, &:hover { color: #fff; background: #d25252; transition: all 0.2s ease;}
+}
+.tabs {  padding: 0;  margin: 0;  display: flex;  align-items: center;  justify-content: center;}
+.slides {
+  .slide { font-size: 22px; color: #000; animation: 0.5s ease fadeInUp;
+    &:not(.active) { display: none; }
+  }
+}
+header {
+  margin-bottom: 30px;
+}
+h1 { margin: 0; }
+
+
+footer.container-fluid {  position: fixed;  right: 30px;  width: calc(100vw - 60px);  bottom: 30px;  display: flex;  align-items: flex-end;  justify-content: space-between;
+  &::before, &:after { content: none; display: none; }
+}
+
+@keyframes fadeInUp {
+  from {
+      transform: translate3d(0,30px,0);
+      opacity: 0;
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1;
+  }
+}
